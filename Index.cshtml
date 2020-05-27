@@ -1,0 +1,27 @@
+﻿@model TrailerSearchLocation.Models.TrailerModel
+
+@{
+    ViewBag.Title = "TrailerSearch";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    @using (Html.BeginForm("Index", "TrailerCoordinates", FormMethod.Post))
+    {
+        <div class=""></div>
+        <hr />
+        <div class="search">
+            <center>
+                <label class="trailerSearch">
+                    <p>Enter Trailer Number</p> <br /><br />
+                    @Html.TextBoxFor(model => model.VehicleName)
+                </label>
+            </center>
+            <br /><br />
+
+            <center>
+                <button class="btn-default">Locate Trailer</button>
+            </center>
+        </div>
+    }
+</div>
